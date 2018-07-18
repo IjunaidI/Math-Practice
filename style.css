@@ -1,0 +1,56 @@
+body{
+	background-color: #93DAEB!important;
+}
+.allign{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto; 
+	margin-right:auto;
+	margin-top: 15%;
+
+}
+.mycard{
+	border-radius: 1000px!important;
+	height: 300px;
+	width: 300px;
+	justify-content: center!important;
+	align-items: center!important;
+	background-color: #259AD2!important;
+	border : 12px solid #1866E2!important;
+}
+.myInput{
+	margin-bottom: 12px;
+
+}
+
+	
+
+.button1{
+	margin-bottom: 12px;
+	background-color: #9D035C!important;
+}
+p{
+	font-family: 'Righteous', cursive;
+	font-size: 3em;
+	padding-top: 12px; 
+	margin-bottom: 0px!important;
+	color: white;
+}
+#score{
+	display:inline-flex;
+	justify-content: flex-end!important;
+	align-items: flex-end!important;
+	margin-right: 10px;
+	font-size: 1.5vw;
+}
+#lives{
+	display:inline-flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-left: 10px;
+	margin-right: 22%;
+	font-size: 1.5vw;
+
+}
