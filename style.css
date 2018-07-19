@@ -1,5 +1,9 @@
 body{
-	background-color: #93DAEB!important;
+	background-image: url(back2.gif);
+	background-size: cover;
+	background-color: blue;
+	
+
 }
 .allign{
 	
@@ -63,4 +67,32 @@ p{
 	justify-content: center;
 	align-items: center;
 	margin-top: 200px;
+}
+#refresh{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-video-wrap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+.fullscreen-video-wrap video{
+  min-height:100%;
+  min-width:100%;
 }

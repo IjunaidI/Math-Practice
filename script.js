@@ -3,6 +3,8 @@ let lives = 3;
 let question1;
 let question2;
 let sound1 = new Audio('claps.mp3');
+let sound2 = new Audio('lose.mp3');
+
 function print(){
 	let question = document.querySelector(".question");
 	question.innerHTML = "<p>" + question1 + " + " + question2 + "</p>";
@@ -48,8 +50,10 @@ function lostCheck(){
     if (lives == 0) {
         
         let wriScore = document.querySelector("body")
-        wriScore.innerHTML = "<p class='lose'>" + "You Lose You Score is " + score + "</p>";
+        wriScore.innerHTML = "<p class='lose'>" + "You Lose You Score is " + score + "</p>" + "<button id='refresh' onClick='window.location.reload()' class='btn btn-info mx-auto'>" + "Try Again" + "</button>"; 
+        sound2.play();
     }
+
     else{
         console.log("going")
     }
