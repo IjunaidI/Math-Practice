@@ -4,15 +4,34 @@ let question1;
 let question2;
 let sound1 = new Audio('claps.mp3');
 let sound2 = new Audio('lose.mp3');
+let signs = ["+","-","*"]
+let answer;
+let qSign = signs[Math.round(Math.random()*2)]
+function calculations(){
+
+    qSign = signs[Math.round(Math.random()*2)]
+    if (qSign == "*") {
+        answer = question1 * question2;
+    }
+    else if (qSign == "-") {
+        answer = question1 - question2;
+    }
+    else if (qSign == "+") {
+        answer = question1 + question2;
+    }
+
+}
+
 
 function print(){
 	let question = document.querySelector(".question");
-	question.innerHTML = "<p>" + question1 + " + " + question2 + "</p>";
+	question.innerHTML = "<p>" + question1 +  " " + qSign  + " " + question2 + "</p>";
 }
 function nextQ(){
 	question1 = Math.round(Math.random()*100);
 	question2 = Math.round(Math.random()*100);
 	print();
+    calculations();
 }     
 nextQ();  
 function totalScore(){
@@ -25,9 +44,8 @@ function livesRemain(){
 }
 livesRemain();
 function check(){
-    
+    calculations();
     let myAnswer = document.querySelector("input").value;
-    let answer = question1 + question2;
 if (lives != 0) {
     if(myAnswer == answer){
         let wriScore = document.querySelector("#wriScore")
