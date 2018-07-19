@@ -2,6 +2,7 @@ let score = 0;
 let lives = 3;
 let question1;
 let question2;
+let sound1 = new Audio('claps.mp3');
 function print(){
 	let question = document.querySelector(".question");
 	question.innerHTML = "<p>" + question1 + " + " + question2 + "</p>";
@@ -27,23 +28,27 @@ function check(){
     let answer = question1 + question2;
 if (lives != 0) {
     if(myAnswer == answer){
-        alert("You are correct");
+        let wriScore = document.querySelector("#wriScore")
+        wriScore.innerHTML = "<p>" + "CORRECT!" + "</p>";
         nextQ();
         ++score;
         totalScore();
+        sound1.play();
     }
     else{
        lives--;
        livesRemain();
        lostCheck();
+        let wriScore = document.querySelector("#wriScore")
+        wriScore.innerHTML = "<p>" + "WRONG!  Lives left = " + lives + "</p>";
     }
     }
-    else{
-        alert("you lose")
-    }
+   
 function lostCheck(){
     if (lives == 0) {
-        alert("you lose")
+        
+        let wriScore = document.querySelector("body")
+        wriScore.innerHTML = "<p class='lose'>" + "You Lose You Score is " + score + "</p>";
     }
     else{
         console.log("going")
