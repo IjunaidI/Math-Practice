@@ -11,13 +11,13 @@ function calculations(){
 
     qSign = signs[Math.round(Math.random()*2)]
     if (qSign == "*") {
-        answer = question1 * question2;
+        answer = parseInt(question1 * question2);
     }
     else if (qSign == "-") {
-        answer = question1 - question2;
+        answer = parseInt(question1 - question2);
     }
     else if (qSign == "+") {
-        answer = question1 + question2;
+        answer = parseInt(question1 + question2);
     }
 
 }
@@ -28,8 +28,8 @@ function print(){
 	question.innerHTML = "<p>" + question1 +  " " + qSign  + " " + question2 + "</p>";
 }
 function nextQ(){
-	question1 = Math.round(Math.random()*100);
-	question2 = Math.round(Math.random()*100);
+	question1 = Math.round(Math.random()*20);
+	question2 = Math.round(Math.random()*20);
 	print();
     calculations();
 }     
@@ -45,7 +45,7 @@ function livesRemain(){
 livesRemain();
 function check(){
     calculations();
-    let myAnswer = document.querySelector("input").value;
+    let myAnswer = parseInt(document.querySelector("input").value);
 if (lives != 0) {
     if(myAnswer == answer){
         let wriScore = document.querySelector("#wriScore")
@@ -60,7 +60,7 @@ if (lives != 0) {
        livesRemain();
        lostCheck();
         let wriScore = document.querySelector("#wriScore")
-        wriScore.innerHTML = "<p>" + "WRONG!  Lives left = " + lives + "</p>";
+        wriScore.innerHTML = "<p style='font-size:5vw;'>" + "WRONG!  Lives left = " + lives + "</p>";
     }
     }
    
