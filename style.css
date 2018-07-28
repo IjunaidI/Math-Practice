@@ -5,6 +5,7 @@ body{
 	background-image: url(back2.gif);
 	background-size: cover;
 	background-color: blue;
+	background-repeat: no-repeat;
 	
 
 }
